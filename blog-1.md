@@ -6,7 +6,7 @@ The ultimate goal of typescript is to catch errors before compilation. In typesc
 -any removes type checking completely 
 -unknown keeps code safe but you have to check the type first.
 
-any Type:
+any TYPE:
 
 Typescript don't check that variable when we use any . Example:
 
@@ -15,14 +15,15 @@ data.map((item: any) => item);
 
 Here Typescript shown no error before compilation though strings dont support map() method.
 
-Problem of using any:
+PROBLEM OF USING any:
+
 -No type safety
 -errors are harder to find
 -Typescript can't help properly.
 This is why any is called a type safety hole.
 
 
-unknown type:
+unknown TYPE:
 
 unknown is a safer version of any because typescript forces us to check the type first. Example:
 
@@ -34,10 +35,11 @@ if (typeof value === "string") {
 But now the code will work safely because we checked that value is a string.
 
 
-Type Narrowing:
+TYPE NARROWING:
 
 Type narrowing means checking a variable's type before using it. Like we use typeof, instanceof etc.
-Example:
+
+EXAMPLE:
 
 let year: unknown =2021;
 if (typeof age === "number") {
@@ -46,7 +48,8 @@ if (typeof age === "number") {
 
 Here typescript can understand that year is a number.
 
-Conclusion:
+CONCLUSION:
+
 -any don't check types and creates errors.
 -unknown if safer because it forces first for type checking.
 -type narrowing makes typescript code more relaible.
